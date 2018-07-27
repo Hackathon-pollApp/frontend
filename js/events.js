@@ -1,9 +1,18 @@
 var n=1;
+var m=2;
+var b=2;
 var element=document.querySelector("#content");
 
+var addOptionsButton = document.querySelector("#addOption");
+var addOptions = document.querySelector("#options");
+
+var addVoterButton = document.querySelector("#addVoter");
+var addVoters = document.querySelector("#voters");
+
+
+
 function eventDisplayCreator() {
-
-
+    
 var event=document.createElement("div");
 event.setAttribute("id","event"+n);
 element.appendChild(event);
@@ -31,6 +40,54 @@ evText.appendChild(evSmallExplain);
 ++n;
 }
 
+function optionCreator(){
+    
+var newOption=document.createElement("input");
+newOption.setAttribute("id","option"+m);
+newOption.setAttribute("type","text"); 
+newOption.setAttribute("value","OPCIO"+m);
+newOption.setAttribute("name","option"+m);      
+addOptions.appendChild(newOption);
+    ++m;
+    
+}
+
+function voterCreator(){
+    var newVoter=document.createElement("form");
+    newVoter.setAttribute("id","voter"+b);
+    addVoters.appendChild(newVoter);
+    var nameVoterInput=document.createElement("input");
+    nameVoterInput.setAttribute("class","voterName");
+    nameVoterInput.setAttribute("id","voterName"+b);
+    newVoter.appendChild(nameVoterInput);
+    var emailVoterInput=document.createElement("input");
+    emailVoterInput.setAttribute("class","voterMail");
+    emailVoterInput.setAttribute("id","voterMail"+b);
+    newVoter.appendChild(emailVoterInput);
+    var nVotesInput=document.createElement("input");
+    nVotesInput.setAttribute("class","votesNum");
+    nVotesInput.setAttribute("id","votesNum"+b);
+    newVoter.appendChild(nVotesInput);
+    
+}
+
+
+document.addEventListener("keypress",eventDisplayCreator,false);
+addOptionsButton.addEventListener("click",optionCreator,false);
+addVoterButton.addEventListener("click",voterCreator,false);
+
+
+
+
+
+
+
+
+
+
+
+
+
 function handleFileSelect(evt) {
     var files = evt.target.files; 
     var output = [];
@@ -43,6 +100,3 @@ function handleFileSelect(evt) {
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
-
-
-document.addEventListener("keypress",eventDisplayCreator,false);
