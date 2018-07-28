@@ -1,83 +1,85 @@
-<html>
-  <head>
+<!doctype html>
+<html lang="en">
+<head>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600i,700|Sunflower:300,500,700" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="centrador mt-5"> 
-        <img class="img-fluid ClientLogo"src="images/logoClient.png" alt="">
-    </div>
-    <div id="loginDiv" class="login-form">
-    <div class="main-div">
-    <div class="panel">
-     <h2>Hola!</h2>
-    </div>
-        <div id="login">
-            <div class="form-group">
-                <input type="text" class="form-control shadow-sm " id="inputName" placeholder="Nom" disabled>
-            </div>
-            <div class="form-group">
-                    <input type="text" class="form-control shadow-sm " id="inputUserName" placeholder="Nom Usuari" disabled>
+    <div class="container">
+        <div class="centrador mt-5">
+            <img class="img-fluid ClientLogo" src="images/logoClient.png" alt="">
+        </div>
+        <div id="loginDiv" class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Hola!</h2>
                 </div>
-            <div class="form-group">
-              <input type="email" class="form-control shadow-sm " id="inputEmail" placeholder="Email"disabled>
+                <div id="login">
+                    <div class="form-group">
+                        <input type="text" class="form-control shadow-sm " id="inputName" placeholder="Nom" disabled>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control shadow-sm " id="inputUserName" placeholder="Nom Usuari" disabled>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control shadow-sm " id="inputEmail" placeholder="Email" disabled>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control shadow-sm" id="inputPassword" placeholder="Password" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <button id="buttonLogin" class="btn btn-primary shadow ">Login</button>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control shadow-sm" id="inputPassword" placeholder="Password"disabled>
-            </div>  
-        </div>
-        <div class="row">
-            <div class="col-12 ">
-                  <button id="buttonLogin" class="btn btn-primary shadow ">Login</button>
+            <div class="fixed-bottom">
+                <p class="botto-text-pre">Ets una ENTITAT?</p>
+                <p id="goToRegisterButton" class="botto-text font-weight-bold">REGISTRAT!</p>
+                <p class="botto-text">@5Team</p>
             </div>
         </div>
-  </div>
-  <div class="fixed-bottom">
-    <p class="botto-text-pre">Ets una ENTITAT?</p>
-     <p id="goToRegisterButton"  class="botto-text font-weight-bold">REGISTRAT!</p>
-         <p class="botto-text">@5Team</p>
-  </div>
-  </div>
- <div id="registerDiv" class="login-form">
-   <div class="main-div">
-    <div class="panel">
-     <h2>Registrar</h2>
+        <div id="registerDiv" class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Registrar</h2>
+                </div>
+                <div id="registrar">
+                    <div class="form-group">
+                        <input type="email" class="form-control shadow-sm " id="inputEmailRegister" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control shadow-sm" id="inputNameRegister" placeholder="Nom">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control shadow-sm" id="inputPasswordRegister" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button id="registerButton" class="btn btn-primary shadow ">Registrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed-bottom">
+                <p id="goToLogin" class="botto-text font-weight-bold"> LOGIN</p>
+                <p class="botto-text">@5Team</p>
+            </div>
+        </div>
     </div>
-      <div id="registrar">
-          <div class="form-group">
-            <input type="email" class="form-control shadow-sm " id="inputEmailRegister" placeholder="Email">
-          </div>
-
-          <div class="form-group">
-              <input type="text" class="form-control shadow-sm" id="inputNameRegister" placeholder="Nom">
-          </div>  
-          <div class="form-group">
-              <input type="password" class="form-control shadow-sm" id="inputPasswordRegister" placeholder="Password">
-          </div>  
-      </div>
-        <div class="row">
-            <div class="col-12">   
-                <button id="registerButton" class="btn btn-primary shadow ">Registrar</button>
-            </div>
-        </div>
-  </div>
-  <div class="fixed-bottom">
-    <p id="goToLogin" class="botto-text font-weight-bold"> LOGIN</p>
-    <p class="botto-text">@5Team</p>
-  </div>
-</div>
-
-</div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
 </body>
 </html>
