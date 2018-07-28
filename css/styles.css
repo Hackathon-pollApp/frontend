@@ -3,16 +3,18 @@ body{
   background: #E0E4E8;
   font-family: 'Montserrat', sans-serif;
   color:#5B5A5A;
+  margin:2%;
 }
 /* Basics styles  */
-
 .main-div {
   background: #E0E4E8 none repeat scroll 0 0;
   border-radius: 2px;
   margin: 10px auto 30px;
   max-width: 50%;
   padding: 50px 50px 50px 50px;
-
+}
+.GoBackBotton{
+  margin-right:0;
 }
 /* logo Section */
 .centrador{
@@ -69,7 +71,8 @@ body{
   padding: 0;
 }
 .forgot {
-  text-align: left; margin-bottom:30px;
+  text-align: left;
+  margin-bottom:30px;
 }
 .botto-text  {
   color: #5B5A5A;
@@ -93,12 +96,17 @@ body{
   text-align: left; 
   margin-top:10px;}
 .back a {
-   font-size: 13px;
-   text-decoration: none;}
+  font-size: 13px;
+  text-decoration: none;}
 .fixed-bottom{
   padding-bottom:1%;
 }
+/* event menu/ display menu page  */
 
+#header{
+  width: 200px;
+  height: 120px;
+}
 /* Responisve */
    /* For mobile phones: */
 @media only screen and (max-width: 991px) {

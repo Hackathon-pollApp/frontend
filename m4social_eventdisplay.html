@@ -11,34 +11,44 @@
       <script type="text/javascript" src="js/events.js" defer></script>
 </head>
 <body>
-      <div id=header>
-            <img src="./logo.jpg" id="logo" alt="m4social logo">
-      </div>
-      <div id=content>
-            <div id=imageEvent>
+      <div class="container">
+           <div class="row">
+                 <div class="col-6 ">
+                        <img class="img-fluid ClientLogo" src="images/logoClient.png" id="logo" alt="m4social logo">
+                 </div>
+                 <div class="col-6 GoBackBotton">
+                        <button class="btn btn-light text-right " onclick="goBack()">Tornar</button>
+                 </div>
+           </div>
             </div>
-            <div id=eventInfo>
-
-            </div>
-            <div id=options>
-                  <input type="text" name="option1" value="OPCIO 1" id=option1>
-            </div>
-            <div id=optionButton>
-                  <button type="button" id=addOption>+</button>
-            </div>
-            <div id=voters>
-                  <form id=voter1>
-                        <input type="text" name="name1" value="NOM " class=voterName>
-                        <input type="text" name="email1" value="email " class=voterMail>
-                        <input type="text" name="nVots1" value="n vots " class=votesNum>
-                  </form>
-            </div>
-            <div id=voterButton>
-                  <button type="button" id=addVoter>+</button>
-            </div>
-            <input type="file" id="files" name="files[]" multiple />
-            <output id="list"></output>
-      </div>
+     </div>
+      
+<div class =" container">
+            <div id=content>
+                        <div id=imageEvent>
+                        </div>
+                        <div id=eventInfo>
+                        </div>
+                        <divclass= "container" id=options>
+                              <input type="text" name="option1" value="OPCIO 1" id=option1>
+                  </div>
+                  <div id=optionButton>
+                              <button type="button" id=addOption>+</button>
+                   </div>
+                  <div id=voters>
+                              <form id=voter1>
+                                    <input type="text" name="name1" value="NOM " class=voterName>
+                                    <input type="text" name="email1" value="email " class=voterMail>
+                                    <input type="text" name="nVots1" value="n vots " class=votesNum>
+                              </form>
+                  </div>
+                   <div id=voterButton>
+                              <button type="button" id=addVoter>+</button>
+                        </div>
+                        <input type="file" id="files" name="files[]" multiple />
+                        <output id="list"></output>
+                  </div>
+</div>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,7 +1,13 @@
+
+// History back botton
+function goBack() {
+    window.history.back();
+}
+
 var n=1;
 var m=2;
 var b=2;
-var element=document.querySelector("#content");
+var element = document.querySelector("#content");
 
 var addOptionsButton = document.querySelector("#addOption");
 var addOptions = document.querySelector("#options");
@@ -16,29 +22,47 @@ function eventDisplayCreator() {
 var event=document.createElement("div");
 event.setAttribute("id","event"+n);
 element.appendChild(event);
+// event.classList.add("col-4", "my-1");
 
 var eventImage=document.createElement("img");
 eventImage.setAttribute("id","evImage");
 event.appendChild(eventImage);
 
+var evTitle=document.createElement("h2");
+evTitle.setAttribute("id","evTitle");
+event.appendChild(evTitle);
+
 var evText=document.createElement("p");
 evText.setAttribute("id","evText");
 event.appendChild(evText);
 
-var evTitle=document.createElement("h2");
-evTitle.setAttribute("id","evTitle");
-evText.appendChild(evTitle);
-
 var evHour=document.createElement("h3");
 evHour.setAttribute("id","evHour");
-evText.appendChild(evHour);
+event.appendChild(evHour);
 
 var evSmallExplain=document.createElement("h3");
 evSmallExplain.setAttribute("id","evSmallExplain");
-evText.appendChild(evSmallExplain);
+event.appendChild(evSmallExplain);
 
 ++n;
+// Calling the test function
+showData(eventImage,evTitle,evText,evHour,evSmallExplain);
 }
+
+
+// Function to test the content in event list page 
+function showData(eventImage,evTitle,evText,evHour,evSmallExplain){
+
+ eventImage.setAttribute("src","https://www.milton.ca/en/live/resources/Events.jpg");
+ evTitle.innerHTML = "title";
+ evText.innerHTML = "text";
+ evHour.innerHTML = "444";
+ evSmallExplain.innerHTML = "ggvhgvghvhgvhjgv";
+
+ 
+}
+
+
 
 function optionCreator(){
     
