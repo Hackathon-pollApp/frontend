@@ -19,28 +19,27 @@ var addVoters = document.querySelector("#voters");
 
 function eventDisplayCreator() {
     
-var event=document.createElement("div");
+var event = document.createElement("div");
 event.setAttribute("id","event"+n);
 element.appendChild(event);
-// event.classList.add("col-4", "my-1");
 
-var eventImage=document.createElement("img");
+var eventImage = document.createElement("img");
 eventImage.setAttribute("id","evImage");
 event.appendChild(eventImage);
 
-var evTitle=document.createElement("h2");
+var evTitle = document.createElement("h2");
 evTitle.setAttribute("id","evTitle");
 event.appendChild(evTitle);
 
-var evText=document.createElement("p");
+var evText = document.createElement("p");
 evText.setAttribute("id","evText");
 event.appendChild(evText);
 
-var evHour=document.createElement("h3");
+var evHour = document.createElement("h3");
 evHour.setAttribute("id","evHour");
 event.appendChild(evHour);
 
-var evSmallExplain=document.createElement("h3");
+var evSmallExplain = document.createElement("h3");
 evSmallExplain.setAttribute("id","evSmallExplain");
 event.appendChild(evSmallExplain);
 
@@ -72,6 +71,7 @@ newOption.setAttribute("type","text");
 newOption.setAttribute("value","OPCIO"+m);
 newOption.setAttribute("name","option"+m);      
 addOptions.appendChild(newOption);
+newOption.classList.add("my-3");
     ++m;
     
 }
@@ -80,14 +80,18 @@ function voterCreator(){
     var newVoter=document.createElement("form");
     newVoter.setAttribute("id","voter"+b);
     addVoters.appendChild(newVoter);
+    newVoter.classList.add("my-3");
+
     var nameVoterInput=document.createElement("input");
     nameVoterInput.setAttribute("class","voterName");
     nameVoterInput.setAttribute("id","voterName"+b);
     newVoter.appendChild(nameVoterInput);
+
     var emailVoterInput=document.createElement("input");
     emailVoterInput.setAttribute("class","voterMail");
     emailVoterInput.setAttribute("id","voterMail"+b);
     newVoter.appendChild(emailVoterInput);
+
     var nVotesInput=document.createElement("input");
     nVotesInput.setAttribute("class","votesNum");
     nVotesInput.setAttribute("id","votesNum"+b);
