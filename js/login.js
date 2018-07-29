@@ -1,5 +1,5 @@
-var url='https://poll-webapp.herokuapp.com';
-//var url='http://localhost:8080';
+//var url='https://poll-webapp.herokuapp.com';
+var url='http://localhost:8080';
 
 $('#registerDiv').show();
 $('#loginDiv').hide();
@@ -27,6 +27,8 @@ function initLoginJson(){
 
    json["email"]=email;
    json["password"]=password;
+   //type, entity or user
+   json["type"]="entity";
 
    return json;
 }
@@ -61,7 +63,7 @@ function initRegisterJson(){
 
 $('#goToLogin').click( function() {
 
-   $('#registerDiv').hide()
+   $('#registerDiv').hide();
    $('#loginDiv').show();
 });
 
@@ -69,7 +71,7 @@ $('#goToLogin').click( function() {
 $('#goToRegisterButton').click( function() {
 
    $('#registerDiv').show();
-   $('#loginDiv').hide()
+   $('#loginDiv').hide();
 });
 
 
