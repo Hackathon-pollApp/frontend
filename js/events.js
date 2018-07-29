@@ -12,6 +12,7 @@ var element = document.querySelector("#content");
 var addOptionsButton = document.querySelector("#addOption");
 var addOptions = document.querySelector("#options");
 
+
 var addVoterButton = document.querySelector("#addVoter");
 var addVoters = document.querySelector("#voters");
 
@@ -19,44 +20,43 @@ var addVoters = document.querySelector("#voters");
 
 function eventDisplayCreator() {
     
-var event = document.createElement("div");
-event.setAttribute("id","event"+n);
-element.appendChild(event);
+    var event = document.createElement("div");
+    event.setAttribute("id","event"+n);
+    element.appendChild(event);
+    
+    var eventImage = document.createElement("img");
+    eventImage.setAttribute("id","evImage");
+    event.appendChild(eventImage);
+    
+    var evTitle = document.createElement("h2");
+    evTitle.setAttribute("id","evTitle");
+    event.appendChild(evTitle);
+    
+    var evText = document.createElement("p");
+    evText.setAttribute("id","evText");
+    event.appendChild(evText);
+    evText.classList.add("textEvent");
 
-var eventImage = document.createElement("img");
-eventImage.setAttribute("id","evImage");
-event.appendChild(eventImage);
-
-var evTitle = document.createElement("h2");
-evTitle.setAttribute("id","evTitle");
-event.appendChild(evTitle);
-
-var evText = document.createElement("p");
-evText.setAttribute("id","evText");
-event.appendChild(evText);
-
-var evHour = document.createElement("h3");
-evHour.setAttribute("id","evHour");
-event.appendChild(evHour);
-
-var evSmallExplain = document.createElement("h3");
-evSmallExplain.setAttribute("id","evSmallExplain");
-event.appendChild(evSmallExplain);
-
-++n;
+    var evHour = document.createElement("p");
+    evHour.setAttribute("id","evHour");
+    event.appendChild(evHour);
+    evHour.classList.add("horaEvent");
+    
+    
+    ++n;
 // Calling the test function
-showData(eventImage,evTitle,evText,evHour,evSmallExplain);
+showData(eventImage,evTitle,evText,evHour);
 }
 
 
 // Function to test the content in event list page 
-function showData(eventImage,evTitle,evText,evHour,evSmallExplain){
+function showData(eventImage,evTitle,evText,evHour){
 
  eventImage.setAttribute("src","https://www.milton.ca/en/live/resources/Events.jpg");
- evTitle.innerHTML = "title";
- evText.innerHTML = "text";
- evHour.innerHTML = "444";
- evSmallExplain.innerHTML = "ggvhgvghvhgvhjgv";
+ evTitle.innerHTML = "Convocatòria Ship2B per a startups amb impacte";
+ evText.innerHTML = "Local Y";
+ evHour.innerHTML = "vie, Oct.5 11:30";
+;
 
  
 }
@@ -65,13 +65,14 @@ function showData(eventImage,evTitle,evText,evHour,evSmallExplain){
 
 function optionCreator(){
     
-var newOption=document.createElement("input");
+var newOption = document.createElement("input");
+
 newOption.setAttribute("id","option"+m);
 newOption.setAttribute("type","text"); 
-newOption.setAttribute("value","OPCIO"+m);
-newOption.setAttribute("name","option"+m);      
+newOption.setAttribute("value","Opció "+""+m);
+newOption.setAttribute("name","option"+""+m);      
 addOptions.appendChild(newOption);
-newOption.classList.add("my-3");
+newOption.classList.add("optioncustom","text-center");
     ++m;
     
 }
@@ -80,23 +81,25 @@ function voterCreator(){
     var newVoter=document.createElement("form");
     newVoter.setAttribute("id","voter"+b);
     addVoters.appendChild(newVoter);
-    newVoter.classList.add("my-3");
 
     var nameVoterInput=document.createElement("input");
     nameVoterInput.setAttribute("class","voterName");
     nameVoterInput.setAttribute("id","voterName"+b);
     newVoter.appendChild(nameVoterInput);
-
+    nameVoterInput.classList.add("optioncustom","text-center");
+ 
     var emailVoterInput=document.createElement("input");
     emailVoterInput.setAttribute("class","voterMail");
     emailVoterInput.setAttribute("id","voterMail"+b);
     newVoter.appendChild(emailVoterInput);
+    emailVoterInput.classList.add("optioncustom","text-center");
 
     var nVotesInput=document.createElement("input");
     nVotesInput.setAttribute("class","votesNum");
     nVotesInput.setAttribute("id","votesNum"+b);
     newVoter.appendChild(nVotesInput);
-    
+    nVotesInput.classList.add("optioncustom","text-center");
+
 }
 
 
