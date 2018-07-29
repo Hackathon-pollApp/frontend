@@ -30,7 +30,13 @@ p {
 img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+a{
+  color:#5B5A5A;
+}
+a:hover{
 
+  color: white;
+}
 /* Basics styles  */
 .main-div {
   background: #E0E4E8 none repeat scroll 0 0;
@@ -165,6 +171,12 @@ img:hover {
 .textEvent{
   font-style: oblique;
 }
+.fas{
+  color: #4BA30C;
+  margin-left:40%;
+  font-size: 2.5em;
+}
+
 /* Responisve */
    /* For mobile phones: */
 @media only screen and (max-width: 991px) {
