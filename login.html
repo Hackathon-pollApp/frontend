@@ -9,70 +9,67 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600i,700|Sunflower:300,500,700" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+
+<div class="container">
         <div class="centrador mt-5">
             <img class="img-fluid ClientLogo" src="images/logoClient.png" alt="">
+         </div>
+            <div id="loginDiv" class="login-form">
+                <div class="main-div">
+                    <div class="panel">
+                        <h2>Hola!</h2>
+                    </div>
+         <div id="login">
+            <div class="form-group">
+                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+         </div>
+         <div class="form-group">
+                 <input type="password" class="form-control" id="inputPassword" placeholder="Contrassenya">
+        </div>  
         </div>
-        <div id="loginDiv" class="login-form">
-            <div class="main-div">
-                <div class="panel">
-                    <h2>Hola!</h2>
+          <div class="row">
+                <div class="col-6 text-left">
+                    <button id="buttonLogin" class="btn btn-primary">Login</button>
+                 </div>
+                <div class="col-6 text-right">   
+                    <button id="goToRegisterButton" class="btn btn-primary">Registrar</button>
                 </div>
-                <div id="login">
-                    <div class="form-group">
-                        <input type="text" class="form-control shadow-sm " id="inputName" placeholder="Nom" disabled>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control shadow-sm " id="inputUserName" placeholder="Nom Usuari" disabled>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control shadow-sm " id="inputEmail" placeholder="Email" disabled>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control shadow-sm" id="inputPassword" placeholder="Password" disabled>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 ">
-                        <button id="buttonLogin" class="btn btn-primary shadow ">Login</button>
-                    </div>
-                </div>
-            </div>
+          </div>
             <div class="fixed-bottom">
-                <p class="botto-text-pre">Ets una ENTITAT?</p>
-                <p id="goToRegisterButton" class="botto-text font-weight-bold">REGISTRAT!</p>
-                <p class="botto-text">@5Team</p>
+                <p class="botto-text ">@5Team</p>
             </div>
-        </div>
-        <div id="registerDiv" class="login-form">
-            <div class="main-div">
-                <div class="panel">
-                    <h2>Registrar</h2>
-                </div>
-                <div id="registrar">
-                    <div class="form-group">
-                        <input type="email" class="form-control shadow-sm " id="inputEmailRegister" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control shadow-sm" id="inputNameRegister" placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control shadow-sm" id="inputPasswordRegister" placeholder="Password">
-                    </div>
-                </div>
+          </div>
+           <div id="registerDiv" class="login-form">
+          <div class="main-div">
+            <div class="panel">
+             <h2>Registrar!</h2>
+            </div>
+              <div id="login">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmailRegister" placeholder="Email">
+                  </div>
+        
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="inputNameRegister" placeholder="Nom">
+                  </div>  
+                  <div class="form-group">
+                      <input type="password" class="form-control" id="inputPasswordRegister" placeholder="Contrassenya">
+                  </div>  
+              </div>
                 <div class="row">
-                    <div class="col-12">
-                        <button id="registerButton" class="btn btn-primary shadow ">Registrar</button>
+                    <div class="col-6 text-left">
+                          <button id="goToLogin" class="btn btn-primary">Login</button>
+                    </div>
+                    <div class="col-6 text-right">   
+                        <button id="registerButton" class="btn btn-primary">Registrar</button>
                     </div>
                 </div>
+          </div>
+           <div class="fixed-bottom">
+                <p class="botto-text ">@5Team</p>
             </div>
-            <div class="fixed-bottom">
-                <p id="goToLogin" class="botto-text font-weight-bold"> LOGIN</p>
-                <p class="botto-text">@5Team</p>
-            </div>
-        </div>
-    </div>
+          </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
