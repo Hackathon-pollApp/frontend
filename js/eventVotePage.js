@@ -8,12 +8,12 @@ function eventDisplayCreator() {
     var event = document.createElement("div");
     event.setAttribute("id","event"+n);
     element.appendChild(event);
-
-    
+    event.classList.add("col-12");
     
     var eventImage = document.createElement("img");
     eventImage.setAttribute("id","evImage");
     event.appendChild(eventImage);
+    eventImage.classList.add("ImgEventMenu");
     
     var evTitle = document.createElement("h2");
     evTitle.setAttribute("id","evTitle");

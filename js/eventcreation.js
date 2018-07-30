@@ -1,22 +1,20 @@
-
-
-    
+   
 var data = [
-    {     "id":"1","eventImage":"frd",
-    "evTitle":"tituloo",
-    "evText":"textooo",
-    "evHour":"horaaa"
+    {  "id":"1","eventImage":"https://www.messec.dk/fileadmin/_processed_/8/a/csm_event_case_39696183e2.jpg",
+    "evTitle":"Lorem Ipsum",
+    "evText":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+    "evHour":"Div, Oct-5"
     },
 
-    { "id":"2","eventImage":"frd",
-    "evTitle":"tituloo2",
-    "evText":"textooo",
-    "evHour":"horaaa"},
+    { "id":"2","eventImage":"https://www.messec.dk/fileadmin/_processed_/8/a/csm_event_case_39696183e2.jpg",
+    "evTitle":"Lorem Ipsum",
+    "evText":" It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+    "evHour":"Div, Oct-5"},
 
-    { "id":"3","eventImage":"frd",
-    "evTitle":"tituloo3",
-    "evText":"textooo",
-    "evHour":"horaaa"}
+    { "id":"3","eventImage":"https://www.messec.dk/fileadmin/_processed_/8/a/csm_event_case_39696183e2.jpg",
+    "evTitle":"Lorem Ipsum",
+    "evText":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+    "evHour":"Div, Oct-5"}
 ];   
 
 
@@ -28,17 +26,11 @@ class eventCreator{
     }
     showEvents(){
          for(let product of this.data){
-           let div1 = document.createElement("div");
-         div1.setAttribute("id","clicable");
-        
-   
-             
-               
-    div1.setAttribute("class","event");
+        let div1 = document.createElement("div");
+         div1.setAttribute("id","clicable");        
+         div1.setAttribute("class","event");
+         
 
-
-    
-    
     let eventImage = document.createElement("img");
     eventImage.setAttribute("src",product.eventImage);
     div1.appendChild(eventImage);
@@ -46,19 +38,19 @@ class eventCreator{
     let evTitle = document.createElement("h2");
     evTitle.innerHTML=product.evTitle;
     div1.appendChild(evTitle);
+    evTitle.classList.add("evTitle");
     
     let evText = document.createElement("p");
     evText.innerHTML=product.evText;
     div1.appendChild(evText);
-    evText.classList.add("textEvent");
+    evText.classList.add("evText");
+    
 
     let evHour = document.createElement("p");
     evHour.innerHTML=product.evHour;
-   div1.appendChild(evHour);
-    evHour.classList.add("horaEvent");
-//     this.s1.appendchild()
-             
-                this.d1.appendChild(div1);
+    div1.appendChild(evHour);
+    evHour.classList.add("evHour");
+    this.d1.appendChild(div1);
         }
     }
 };
