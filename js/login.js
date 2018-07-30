@@ -6,7 +6,7 @@ $('#loginDiv').hide();
 
 
 $('#buttonLogin').click(function () {
-    var redirectTo = "paginatologin.html";
+    var redirectTo = "eventCreator.html";
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
@@ -44,7 +44,7 @@ function initLoginJson() {
 }
 
 $('#registerButton').click(function () {
-    var redirectTo = "m4social_eventmenu.html";
+    var redirectTo = "eventCreator.html";
 
     var success = function (entity) {
         alert("Benvingut " + entity.name + ", el teu id es " + entity.id);
