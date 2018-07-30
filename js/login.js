@@ -23,6 +23,15 @@ function initLoginJson() {
     var email = $('#inputEmail').val();
     var password = $('#inputPassword').val();
 
+    $("#checkbox1").on('change', function() {
+      if ($(this).is(':checked')) {
+        $(this).attr('value', 'true');
+      } else {
+        $(this).attr('value', 'false');
+      }
+      
+    });
+
     var json = {};
 
     json["email"] = email;
