@@ -31,7 +31,7 @@ function eventDisplayCreator() {
     var event = document.createElement("div");
     event.setAttribute("id","event"+n);
     element.appendChild(event);
-    
+  
     var eventImage = document.createElement("img");
     eventImage.setAttribute("id","evImage");
     event.appendChild(eventImage);
@@ -50,12 +50,10 @@ function eventDisplayCreator() {
     event.appendChild(evHour);
     evHour.classList.add("horaEvent");
     
-    
     ++n;
 // Calling the test function
 showData(eventImage,evTitle,evText,evHour);
 }
-
 
 // Function to test the content in event list page 
 function showData(eventImage,evTitle,evText,evHour){

@@ -12,53 +12,51 @@
       <script type="text/javascript" src="js/events.js" defer></script>
 </head>
 <body>
-      <div class="container">
+<div class="container">       
            <div class="row">
                   <div class="col-6 GoBackBotton">
                         <button class="customized-but" class="btn btn-light text-right " onclick="goBack()">Tornar</button>
                    </div>
-                 <div class="col-6 ">
-                        <img class="img-fluid ClientLogoEvP" src="images/logoClient.png" id="logo" alt="m4social logo">
+                 <div class="col-6">
+                        <img class="img-fluid ClientLogoEvP mb-3 " src="images/logoClient.png" id="logo" alt="m4social logo">
                  </div>
            </div>
       </div>
      </div> 
-<div class ="container createvent-user" id= "content">
-     <div id= "eventName">
-                  <input class= "optioncustom text-center"type="text" name="name" value="Nom de l'event" id=name>
-     </div>
-     <div id= "eventDescription">
-                  <input class= "optioncustom text-center"type="text" name="description" value="Descripció de l'event" id=description>
-     </div>
-    <div id= "imageEvent">
-                  <input class= "optioncustom text-center"type="text" name="imageEvent" value="imatge" id=imageURL>
-     </div>
-                  
-            <div id= "eventQuestion">
-                     <input class= "optioncustom text-center"type="text" name="question" value="Pregunta a realitzar" id=question>
-            </div>
-            <div id= "options">
-                  <input class= "optioncustom text-center"type="text" name="option1" value="Opció 1" id=option1>
-            </div>
-            <div class="mb-3" id= "optionButton">
-                  <button class="customized-but" type="button" id= "addOption">+</button>
-            </div>
-            <div id= "voters">
-                  <form id= "voter1" >
-                         <input class= "optioncustom text-center voterName" type="text" id="voterName1" name="name1" value="Nom">
-                         <input class= "optioncustom text-center voterMail" type="text" id="voterMail1" name="email1" value="Email">
-                         <input class= "optioncustom text-center votesNum " type="text" id="votesNum1" name="nVots1" value=" Num.Vots">
-                  </form>
-            </div>
-            <div class="my-3" id= "voterButton">
-                   <button class="customized-but" type="button" id= "addVoter">+</button>
-            </div>     
-            <div class="my-3" id= "sendButton">
-                   <button class="customized-but" type="button" id= "sendData">Envia</button>
-            </div>    
+      <div class ="container createvent-user" id= "content">
+      <div id= "eventName" class="col-xs-12 text-center mt-2">
+            <input class= "optioncustom text-center"type="text" name="name" value="Nom de l'event" id=name>
+      </div>
+      <div id= "eventDescription" class="col-xs-12 text-center">
+            <input class= "optioncustom text-center"type="text" name="description" value="Descripció de l'event" id=description>
+      </div>
+      <div id= "imageEvent" class="col-xs-12 text-center">
+            <input class= "optioncustom text-center"type="text" name="imageEvent" value="imatge" id=imageURL>
+      </div>
+            
+      <div id= "eventQuestion" class="col-xs-12 text-center">
+                  <input class= "optioncustom text-center"type="text" name="question" value="Pregunta a realitzar" id=question>
+      </div>
+      <div id= "options" class="text-center mt-5">
+            <input class= "optioncustom text-center"type="text" name="option1" value="Opció 1" id=option1>
+      </div>
+      <div class="btn-positionEventCreator" id= "optionButton">
+            <button class="customized-but" type="button" id= "addOption">+</button>
+      </div>
+      <div id= "voters"class="text-center mt-5">
+            <form id= "voter1" >
+                        <input class= "optioncustom text-center voterName" type="text" id="voterName1" name="name1" value="Nom">
+                        <input class= "optioncustom text-center voterMail" type="text" id="voterMail1" name="email1" value="Email">
+                        <input class= "optioncustom text-center votesNum " type="text" id="votesNum1" name="nVots1" value=" Num.Vots">
+            </form>
+      </div>
+      <div class="btn-positionEventCreator" id= "voterButton">
+                  <button class="customized-but" type="button" id= "addVoter">+</button>
+      </div>     
+      <div class=""id= "sendButton">
+                  <button class="customized-but" type="button" id= "sendData">Envia</button>
+      </div>    
 </div>
-    
-  
     
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
