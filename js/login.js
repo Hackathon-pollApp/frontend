@@ -46,8 +46,8 @@ function initLoginJson() {
 $('#registerButton').click(function () {
     var redirectTo = "m4social_eventmenu.html";
 
-    var success = function (user) {
-        alert("Benvingut " + user.name + ", el teu id es " + user.id);
+    var success = function (entity) {
+        alert("Benvingut " + entity.name + ", el teu id es " + entity.id);
     };
 
     var error = function (error) {
@@ -55,7 +55,6 @@ $('#registerButton').click(function () {
     };
 
     var json = initRegisterJson();
-    debugger;
     post(url + "/entities", json, success, error, redirectTo);
 });
 
@@ -88,14 +87,14 @@ $('#goToRegisterButton').click(function () {
 });
 
 
-function post(url, json, success, error, url) {
+function post(url, json, success, error, redirect) {
     $.ajax({
         method: "POST",
         url: url,
         data: JSON.stringify(json),
         contentType: "application/json"
     }).done(function (data) {
-        window.location.href = url;
+        window.location.href = redirect;
         success(data);
     }).fail(function (err) {
         error(err);
