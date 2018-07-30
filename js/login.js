@@ -46,14 +46,18 @@ $('#registerButton').click(function () {
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
-
+    var redirect = function (){
+    var eventDashboard = "m4social_eventmenu.html"+$(".redirect").val();
+    window.location.href = eventDashboard;
+    
+};
     var error = function (error) {
         alert("Error al registrar-se: " + error.status);
     };
 
     var json = initRegisterJson();
     debugger;
-    post(url + "/users", json, success, error);
+    post(url + "/users", json, success, error, redirect);
 });
 
 function initRegisterJson() {
@@ -85,15 +89,18 @@ $('#goToRegisterButton').click(function () {
 });
 
 
-function post(url, json, success, error) {
+
+function post(url, json, success, error,redirect) {
     $.ajax({
         method: "POST",
         url: url,
         data: JSON.stringify(json),
         contentType: "application/json"
     }).done(function (data) {
+        redirect();
         success(data);
     }).fail(function (err) {
         error(err);
+        location.reload();
     });
 }
