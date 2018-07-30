@@ -6,6 +6,7 @@ $('#loginDiv').hide();
 
 
 $('#buttonLogin').click(function () {
+    var redirectTo = "paginatologin.html";
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
@@ -15,7 +16,7 @@ $('#buttonLogin').click(function () {
     };
 
     var json = initLoginJson();
-    post(url + "/login", json, success, error);
+    post(url + "/login", json, success, error, redirectTo);
 
 });
 
@@ -43,21 +44,19 @@ function initLoginJson() {
 }
 
 $('#registerButton').click(function () {
+    var redirectTo = "m4social_eventmenu.html";
+
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
-    var redirect = function () {
-        var eventDashboard = "m4social_eventmenu.html" + $(".redirect").val();
-        window.location.href = eventDashboard;
 
-    };
     var error = function (error) {
         alert("Error al registrar-se: " + error.status);
     };
 
     var json = initRegisterJson();
     debugger;
-    post(url + "/users", json, success, error, redirect);
+    post(url + "/entities", json, success, error, redirectTo);
 });
 
 function initRegisterJson() {
@@ -89,14 +88,14 @@ $('#goToRegisterButton').click(function () {
 });
 
 
-function post(url, json, success, error, redirect) {
+function post(url, json, success, error, url) {
     $.ajax({
         method: "POST",
         url: url,
         data: JSON.stringify(json),
         contentType: "application/json"
     }).done(function (data) {
-        redirect();
+        window.location.href = url;
         success(data);
     }).fail(function (err) {
         error(err);
