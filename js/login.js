@@ -23,13 +23,13 @@ function initLoginJson() {
     var email = $('#inputEmail').val();
     var password = $('#inputPassword').val();
 
-    $("#checkbox1").on('change', function() {
-      if ($(this).is(':checked')) {
-        $(this).attr('value', 'true');
-      } else {
-        $(this).attr('value', 'false');
-      }
-      
+    $("#checkbox1").on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).attr('value', 'true');
+        } else {
+            $(this).attr('value', 'false');
+        }
+
     });
 
     var json = {};
@@ -46,11 +46,11 @@ $('#registerButton').click(function () {
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
-    var redirect = function (){
-    var eventDashboard = "m4social_eventmenu.html"+$(".redirect").val();
-    window.location.href = eventDashboard;
-    
-};
+    var redirect = function () {
+        var eventDashboard = "m4social_eventmenu.html" + $(".redirect").val();
+        window.location.href = eventDashboard;
+
+    };
     var error = function (error) {
         alert("Error al registrar-se: " + error.status);
     };
@@ -89,8 +89,7 @@ $('#goToRegisterButton').click(function () {
 });
 
 
-
-function post(url, json, success, error,redirect) {
+function post(url, json, success, error, redirect) {
     $.ajax({
         method: "POST",
         url: url,
