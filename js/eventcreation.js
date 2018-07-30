@@ -1,92 +1,78 @@
-var n;
-var element = document.querySelector("#content");
-var i;
-var j;
 
-function eventDisplayCreator() {
-
-    var event = document.createElement("div");
-    event.setAttribute("id","event"+n);
-    element.appendChild(event);
 
     
+var data = [
+    {     "id":"1","eventImage":"frd",
+    "evTitle":"tituloo",
+    "evText":"textooo",
+    "evHour":"horaaa"
+    },
+
+    { "id":"2","eventImage":"frd",
+    "evTitle":"tituloo2",
+    "evText":"textooo",
+    "evHour":"horaaa"},
+
+    { "id":"3","eventImage":"frd",
+    "evTitle":"tituloo3",
+    "evText":"textooo",
+    "evHour":"horaaa"}
+];   
+
+
+class eventCreator{
+    constructor(data){
+        this.d1 = document.getElementById("content");
+        this.data = data;
+        console.log(data);
+    }
+    showEvents(){
+         for(let product of this.data){
+           let div1 = document.createElement("div");
+         div1.setAttribute("id","clicable");
+        
+   
+             
+               
+    div1.setAttribute("class","event");
+
+
     
-    var eventImage = document.createElement("img");
-    eventImage.setAttribute("id","evImage");
-    event.appendChild(eventImage);
     
-    var evTitle = document.createElement("h2");
-    evTitle.setAttribute("id","evTitle");
-    event.appendChild(evTitle);
+    let eventImage = document.createElement("img");
+    eventImage.setAttribute("src",product.eventImage);
+    div1.appendChild(eventImage);
     
-    var evText = document.createElement("p");
-    evText.setAttribute("id","evText");
-    event.appendChild(evText);
+    let evTitle = document.createElement("h2");
+    evTitle.innerHTML=product.evTitle;
+    div1.appendChild(evTitle);
+    
+    let evText = document.createElement("p");
+    evText.innerHTML=product.evText;
+    div1.appendChild(evText);
     evText.classList.add("textEvent");
 
-    var evHour = document.createElement("p");
-    evHour.setAttribute("id","evHour");
-    event.appendChild(evHour);
+    let evHour = document.createElement("p");
+    evHour.innerHTML=product.evHour;
+   div1.appendChild(evHour);
     evHour.classList.add("horaEvent");
-    
-    
-   
-// Calling the test function
-showData(eventImage,evTitle,evText,evHour);
+//     this.s1.appendchild()
+             
+                this.d1.appendChild(div1);
+        }
+    }
+};
+function loadBestSell(data){
+    let myItem = new eventCreator(data);
+    myItem.showEvents();
 }
+var data = loadBestSell(data);
 
 
-// Function to test the content in event list page 
-function showData(eventImage,evTitle,evText,evHour){
-j=0;
- eventImage.setAttribute("src","datajson[i][j]");
-    j++;
- evTitle.innerHTML = datajson[i][j];
-       j++;
- evText.innerHTML = datajson[i][j];
-       j++;
- evHour.innerHTML = datajson[i][j];
-j=0;
+document.getElementById("clicable").addEventListener("click",function(){
+     window.location.replace("eventSinglePage.html")
+    
+})
+
 
  
-}
-
-
-datajson = [
-     {
-    "eventImage":"frd",
-    "eventName":"titulo1",
-    "evText":"textooo1",
-    "evHour":"horaaa1"
-    
-    
-},
- {
-    "eventImage":"frd",
-    "evTitle":"titulo2",
-    "evText":"textooo2",
-    "evHour":"horaaa2"
-    
-    
-},
- {
-    "eventImage":"frd3",
-    "evTitle":"titulo3",
-    "evText":"textooo3",
-    "evHour":"horaaa3"
-    
-    
-}
-    
-    
- 
-    ];
- 
-for ( i in datajson) {
-eventDisplayCreator();
-  }
-
-
-console.log("Mostrando resultado final:");
-console.log(datajson);
-
