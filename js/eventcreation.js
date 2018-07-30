@@ -17,6 +17,8 @@ var data = [
     "evHour":"Div, Oct-5"}
 ];   
 
+// Function to test the content in event list page 
+function showData(eventImage,evTitle,evText,evHour){
 
 class eventCreator{
     constructor(data){
@@ -58,13 +60,21 @@ function loadBestSell(data){
     let myItem = new eventCreator(data);
     myItem.showEvents();
 }
-var data = loadBestSell(data);
 
-
-document.getElementById("clicable").addEventListener("click",function(){
-     window.location.replace("eventSinglePage.html")
     
-})
-
-
+    
  
+    ];
+ 
+for ( i in datajson) {
+  for (j in datajson[i]) {
+  
+     eventDisplayCreator();
+        
+    }
+  }
+
+
+console.log("Mostrando resultado final:");
+console.log(datajson);
+
