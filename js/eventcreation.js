@@ -29,6 +29,7 @@ class eventCreator{
          for(let product of this.data){	
         let div1 = document.createElement("div");	
         div1.setAttribute("class","clicable");
+        div1.setAttribute("onclick","eventId(product.id)")
         div1.setAttribute("class",product.id); 
          div1.setAttribute("class","event",product.id);
          div1.setAttribute("data-event-id",product.id);	
@@ -37,20 +38,20 @@ class eventCreator{
     let eventImage = document.createElement("img");	
     eventImage.setAttribute("src",product.eventImage);	
     eventImage.setAttribute("class",product.id); 
-    eventImage.setAttribute("class",'clicable'); 
+    eventImage.setAttribute("class","clicable");
     div1.appendChild(eventImage);	
     	
     let evTitle = document.createElement("h2");	
     evTitle.innerHTML=product.evTitle;	
-    evTitle.setAttribute("class",product.id); 
-    evTitle.setAttribute("class",'clicable');
+    evTitle.setAttribute("class",id); 
+    evTitle.setAttribute("class","clicable");
     div1.appendChild(evTitle);	
     evTitle.classList.add("evTitle");
     	
     let evText = document.createElement("p");	
     evText.innerHTML=product.evText;	
     evText.setAttribute("class",product.id); 
-    evText.setAttribute("class",'clicable');
+    evText.setAttribute("class","clicable");
     div1.appendChild(evText);	
     evText.classList.add("evText");	
 
@@ -68,16 +69,26 @@ function loadBestSell(data){
     let myItem = new eventCreator(data);	
     myItem.showEvents();	
 }	
-var data2 = loadBestSell(data);	
 
- document.getElementsByClassName("clicable").addEventListener("click",function(evt)
- {	
-    $("clicable").parent()
-     console.log(evt.target);
-     console.log(evt.target.classList);
+function eventId(id){
+
+    console.log(id);
+}
+var data2 = loadBestSell(data);	
+    
+
+    // $(".clicable").each(function(){
+    //     debugger;
+    //     var DOMelement = this;
+    //     var jQueryElement = $(this);
+        
+    // });
+
+  //  $("clicable").parent()
+    //  console.log(evt.target);
+//     console.log(evt.target.classList);
     //  window.location.replace("eventSinglePage.html")	
 
-})
 // SinglePage
 function searchEvent(id){
     var eventFound = null; 
