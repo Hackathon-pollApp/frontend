@@ -28,27 +28,35 @@ class eventCreator{
     showEvents(){	
          for(let product of this.data){	
         let div1 = document.createElement("div");	
-         div1.setAttribute("id","clicable");
-         div1.setAttribute("class","event");
+        div1.setAttribute("class","clicable");
+        div1.setAttribute("class",product.id); 
+         div1.setAttribute("class","event",product.id);
          div1.setAttribute("data-event-id",product.id);	
      	
     	
     let eventImage = document.createElement("img");	
     eventImage.setAttribute("src",product.eventImage);	
+    eventImage.setAttribute("class",product.id); 
+    eventImage.setAttribute("class",'clicable'); 
     div1.appendChild(eventImage);	
     	
     let evTitle = document.createElement("h2");	
     evTitle.innerHTML=product.evTitle;	
+    evTitle.setAttribute("class",product.id); 
+    evTitle.setAttribute("class",'clicable');
     div1.appendChild(evTitle);	
     evTitle.classList.add("evTitle");
     	
     let evText = document.createElement("p");	
     evText.innerHTML=product.evText;	
+    evText.setAttribute("class",product.id); 
+    evText.setAttribute("class",'clicable');
     div1.appendChild(evText);	
     evText.classList.add("evText");	
 
     let evHour = document.createElement("p");	
-    evHour.innerHTML=product.evHour;	
+    evHour.innerHTML=product.evHour;
+    evHour.setAttribute("class",product.id); 	
     div1.appendChild(evHour);	
     evHour.classList.add("horaEvent");	 	
     this.d1.appendChild(div1);	
@@ -62,10 +70,11 @@ function loadBestSell(data){
 }	
 var data2 = loadBestSell(data);	
 
- document.getElementById("clicable").addEventListener("click",function(evt)
+ document.getElementsByClassName("clicable").addEventListener("click",function(evt)
  {	
     $("clicable").parent()
      console.log(evt.target);
+     console.log(evt.target.classList);
     //  window.location.replace("eventSinglePage.html")	
 
 })
