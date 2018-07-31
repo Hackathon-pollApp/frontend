@@ -196,7 +196,7 @@ input:valid {
   text-align: center;
   margin-top:4%;
   color: lighten;
-  margin-right: -20%;
+
   
 }
 .evHour{
@@ -223,8 +223,30 @@ input:valid {
 .event{
   width: 70%;
   padding:1%;
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 30px;
+  background: rgba(0,0,0,0.09);
   
-
+}
+.event::before,.event:after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+.eventn:hover::before, .event:hover::after{
+  width: 100%;
+}
+.event:hover::after .event:hover::after{
+  height: 100%;
 }
 #content{
   margin-left: 10%;

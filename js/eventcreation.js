@@ -65,7 +65,7 @@ var data2 = loadBestSell(data);
  document.getElementById("clicable").addEventListener("click",function(evt)
  {	
     $("clicable").parent()
-     console.log(evt);
+     console.log(evt.target);
     //  window.location.replace("eventSinglePage.html")	
 
 })
