@@ -6,7 +6,7 @@ $('#loginDiv').hide();
 
 
 $('#buttonLogin').click(function () {
-    var redirectTo = "eventCreator.html";
+    var redirectTo = "eventDashBoard.html";
     var success = function (user) {
         alert("Benvingut " + user.name + ", el teu id es " + user.id);
     };
@@ -23,12 +23,16 @@ $('#buttonLogin').click(function () {
 function initLoginJson() {
     var email = $('#inputEmail').val();
     var password = $('#inputPassword').val();
+    var type;
 
-    $("#checkbox1").on('change', function () {
+    $("#typeinput").on('change', function () {
         if ($(this).is(':checked')) {
             $(this).attr('value', 'true');
+            type = "entity";
         } else {
             $(this).attr('value', 'false');
+            type = "user";
+
         }
 
     });
@@ -38,13 +42,13 @@ function initLoginJson() {
     json["email"] = email;
     json["password"] = password;
     //type, entity or user
-    json["type"] = "entity";
+    json["type"] = type;
 
     return json;
 }
 
 $('#registerButton').click(function () {
-    var redirectTo = "eventCreator.html";
+    var redirectTo = "eventDashBoard.html";
 
     var success = function (entity) {
         alert("Benvingut " + entity.name + ", el teu id es " + entity.id);

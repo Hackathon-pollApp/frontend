@@ -123,7 +123,7 @@ function initEventJson(){
      json["image"]=imageURL;
     json["question"]=question;
     json["options"]=optionArray;
-    json["voters"]=voterArray;
+    json["users"]=voterArray;
    //type, entity or user
    json["type"]="entity";
 
