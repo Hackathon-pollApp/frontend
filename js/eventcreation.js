@@ -29,7 +29,8 @@ class eventCreator{
          for(let product of this.data){	
         let div1 = document.createElement("div");	
          div1.setAttribute("id","clicable");
-         div1.setAttribute("class","event");	
+         div1.setAttribute("class","event");
+         div1.setAttribute("data-event-id",product.id);	
      	
     	
     let eventImage = document.createElement("img");	
@@ -59,8 +60,23 @@ function loadBestSell(data){
     let myItem = new eventCreator(data);	
     myItem.showEvents();	
 }	
-var data = loadBestSell(data);	
- document.getElementById("clicable").addEventListener("click",function(){	
-     window.location.replace("eventSinglePage.html")	
-    	
+var data2 = loadBestSell(data);	
+
+ document.getElementById("clicable").addEventListener("click",function(evt)
+ {	
+    $("clicable").parent()
+     console.log(evt);
+    //  window.location.replace("eventSinglePage.html")	
+
 })
+// SinglePage
+function searchEvent(id){
+    var eventFound = null; 
+    data.forEach(function(event){
+       if(id == event.id ){
+           eventFound = event;
+       }
+    })
+   return eventFound;
+}
+
